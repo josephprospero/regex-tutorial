@@ -23,6 +23,18 @@ Briefly summarize the regex you will be describing and what you will explain. In
 ## Regex Components
 
 ### Anchors
+Anchors are sequences that help search for the beginning and end of a string.
+
+Examples of Anchors:
+```
+^The        matches any string that starts with The 
+
+end$        matches a string that ends with end
+
+^The end$   exact string match (starts and ends with The end)
+
+roar        matches any string that has the text roar in it
+```
 
 ### Quantifiers
 
