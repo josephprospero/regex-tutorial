@@ -27,6 +27,13 @@ Anchors are sequences that help search for the beginning and end of a string.
 
 Examples of Anchors:
 ```
+^           indicates the starting point of the searched string
+
+$           indicates the ending point of the searched string or word
+```
+
+Examples:
+```
 ^The        matches any string that starts with The 
 
 end$        matches a string that ends with end
@@ -37,6 +44,39 @@ roar        matches any string that has the text roar in it
 ```
 
 ### Quantifiers
+Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found. 
+
+Examples of Quantifiers:
+```
+*           matches a string whose preceeding characters are followed by zero or more of the last character
+
++           matches a string whose preceeding characters are followed by one or more of the last character
+
+?           matches a string whose preceeding characters are followed by zero or one more of the last character
+
+{}          matches a string whose preceeding characters are followed by x amount (bracketed number) of the last character
+
+()          matches a string whose preceeding characters are followed by zero or x more copies of the parenthesized characters
+```
+
+Examples:
+```
+abc*        matches a string that has ab followed by zero or more c
+
+abc+        matches a string that has ab followed by one or more c
+
+abc?        matches a string that has ab followed by zero or one c
+
+abc{2}      matches a string that has ab followed by 2 c
+
+abc{2,}     matches a string that has ab followed by 2 or more c
+
+abc{2,5}    matches a string that has ab followed by 2 up to 5 c
+
+a(bc)*      matches a string that has a followed by zero or more copies of the sequence bc
+
+a(bc){2,5}  matches a string that has a followed by 2 up to 5 copies of the sequence bc
+```
 
 ### OR Operator
 
