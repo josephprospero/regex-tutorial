@@ -153,6 +153,25 @@ Examples:
 
 
 ### Grouping and Capturing
+Grouping creates a unified string so that it is matched completely.
+
+Examples of Grouping:
+```
+()          characters inside parentheses indicates a captured group
+
+(?:)        using ?: disables the captured group
+
+(?<>)       using ?<> names the group
+```
+
+Examples:
+```
+a(bc)           parentheses create a capturing group with value bc
+
+a(?:bc)*        using ?: we disable the capturing group
+
+a(?<foo>bc)     using ?<foo> we put a name to the group
+```
 
 ### Bracket Expressions
 
