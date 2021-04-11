@@ -22,6 +22,7 @@ Briefly summarize the regex you will be describing and what you will explain. In
 
 ## Regex Components
 
+
 ### Anchors
 Anchors are sequences that help search for the beginning and end of a string.
 
@@ -42,6 +43,7 @@ end$        matches a string that ends with end
 
 roar        matches any string that has the text roar in it
 ```
+
 
 ### Quantifiers
 Quantifiers specify how many instances of a character, group, or character class must be present in the input for a match to be found. 
@@ -78,6 +80,7 @@ a(bc)*      matches a string that has a followed by zero or more copies of the s
 a(bc){2,5}  matches a string that has a followed by 2 up to 5 copies of the sequence bc
 ```
 
+
 ### OR Operator
 Also known as Alternation Operators, OR Operators match between a choice of regular expressions.  
 
@@ -94,6 +97,7 @@ a(b|c)     matches a string that has a followed by b or c (and captures b or c)
 
 a[bc]      same as previous, but without capturing b or c
 ```
+
 
 ### Character Classes
 Character Classes tell the regex engine to search for specifically indicated characters such as numbers, words, or spaces.
@@ -124,8 +128,29 @@ Examples:
 \W         matches a single any non-character that is a-z
 
 \S         matches a single non-` `
+
 ```
 ### Flags
+Flags are special tags that alter a search to return different results.
+
+Examples of Flags:
+```
+`g`         (global), makes the expression serach for all occurrences
+
+`m`         (multi-line), makes the boundary characters '^' and '$' match the beginning and ending of every single line instead of the beginning and ending of the whole string.
+
+`i`         (insensitive), mmakes the expression search case-insensitively
+```
+
+Examples:
+```
+/Hello/g   matches all characters `Hello` in the test
+
+/Hello/m   matches the beginning and ending of each line with `Hello`, rather than the whole string `Hello` itself
+
+/Hello/i   matches all `hello` regardless of case (Hello, hEllo, heLlo, hellO, hello, HELLO would all return in the search)
+```
+
 
 ### Grouping and Capturing
 
