@@ -79,6 +79,21 @@ a(bc){2,5}  matches a string that has a followed by 2 up to 5 copies of the sequ
 ```
 
 ### OR Operator
+Also known as Alternation Operators, OR Operators match between a choice of regular expressions.  
+
+Examples of OR Operators:
+```
+(|)         matches a string that is followed by the value on the left or the right of the veritcal bar
+
+[]          matches a string that is not followed by the value indicated in the brackets
+```
+
+Examples:
+```
+a(b|c)     matches a string that has a followed by b or c (and captures b or c)
+
+a[bc]      same as previous, but without capturing b or c
+```
 
 ### Character Classes
 
