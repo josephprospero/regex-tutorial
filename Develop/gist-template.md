@@ -96,7 +96,35 @@ a[bc]      same as previous, but without capturing b or c
 ```
 
 ### Character Classes
+Character Classes tell the regex engine to search for specifically indicated characters such as numbers, words, or spaces.
 
+Examples of Character Classes:
+```
+`\d`      matches a single character that is a digit
+
+`\w`      matches a word character (any alphanumeric character plus underscore)
+
+`\s`      matches a whitespace character (including tabs and line brakes)
+
+`.`       matches any character the capital case for any aformentioned characters will inverse the match
+```
+
+Examples:
+```
+\d         matches a single character that is a digit
+
+\w         matches a word character (alphanumeric character plus underscore)
+
+\s         matches a whitespace character (includes tabs and line breaks)
+
+.          matches any character
+
+\D         matches a single non-digit character
+
+\W         matches a single any non-character that is a-z
+
+\S         matches a single non-` `
+```
 ### Flags
 
 ### Grouping and Capturing
